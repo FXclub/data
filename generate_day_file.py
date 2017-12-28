@@ -2,6 +2,9 @@ import sys
 from os import listdir
 from os.path import isfile, join
 
+currency_name = sys.argv[1]
+print("handling currency ["+currency_name+"]")
+
 cur_path = "./"
 suffix = ".csv"
 #files = [f for f in listdir(cur_path) if isfile(join(cur_path, f))]
@@ -33,7 +36,7 @@ print("["+str(count)+"] dates in total")
 ################################
 # Processing
 ################################
-prefix="GBPUSD_"
+prefix=currency_name + "_"
 outpath = "./out/"
 outfile_name = ""
 process_count = 0
